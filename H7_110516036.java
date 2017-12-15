@@ -64,10 +64,7 @@ public class H7_110516036 extends JFrame {//主要的介面
 		@Override
 		public void actionPerformed(ActionEvent e) {
 			// Get operand
-			if (e.getActionCommand() == "1" || e.getActionCommand() == "2" || e.getActionCommand() == "3"
-					|| e.getActionCommand() == "4" || e.getActionCommand() == "5" || e.getActionCommand() == "6"
-					|| e.getActionCommand() == "7" || e.getActionCommand() == "8" || e.getActionCommand() == "9"
-					|| e.getActionCommand() == "0" || e.getActionCommand() == "00" || e.getActionCommand() == ".") {
+			if (e.getActionCommand().matches("[0-9\\.]")||e.getActionCommand()=="00") {
 				output += e.getActionCommand();
 				if (operator_enter == false) {// 2nd
 					temp += e.getActionCommand();
